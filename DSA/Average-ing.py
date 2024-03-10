@@ -1,7 +1,4 @@
-equals = 0
-numnow = 0
 loop = 5
-
 print("Welcome to the average-ier; This baby averages everything you input upto five times. Inputting anything but a number will end the program and prints out the average early\n")
 
 for x in range(0, loop): # can be turned to while loop for infinite average-ing
