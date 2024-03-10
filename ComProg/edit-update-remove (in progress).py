@@ -28,49 +28,48 @@ while i != 0:
 3 - remove
 4 - end
 Pick a choice: """))
-                break
+                
     
             except ValueError:
                 print("That's not a number bruv")
                 continue
             
-            if choice > 5:
-                print("That's not a choice mate")
-                continue
+            if choice == 1:
             
-        if choice == 1:
+                lop1 = True
             
-            lop1 = True
+                while lop1 == True:
+                    print("\n{0}".format(arr))
+                    arrcount = len(arr)
             
-            while lop1 == True:
-                print("\n{0}".format(arr))
-                arrcount = len(arr)
-            
-                bleh = int(input("Insert number of sequence you wanna edit: "))
+                    bleh = int(input("Insert number of sequence you wanna edit: "))
                 
                 
-                if bleh > arrcount:
-                    print("Bruh, that's called adding")
+                    if bleh > arrcount:
+                        print("Bruh, that's called adding")
                     
-                elif bleh < 0:
-                    print("I don't hold negative indexes moron")
+                    elif bleh < 0:
+                        print("I don't hold negative indexes moron")
                     
-                else:
-                    replace = input("What do you want to replace this data with?: ")
+                    else:
+                        replace = input("What do you want to replace this data with?: ")
                     
                     arr[bleh-1] = replace
                     print(arr)
                     
                     continue
                 
-        if choice == 2:
+            if choice == 2:
             
-            lop2 = True
+                lop2 = True
                 
             
             
                 
-        
+            # put in end
+            if choice > 5:
+                print("That's not a choice mate")
+                continue
         
     
     
