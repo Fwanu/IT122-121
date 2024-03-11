@@ -139,5 +139,6 @@ Pick a choice: """))
                 print("That's not a choice mate")
                 continue
         
+        print("GG I'm done")
     
-        
+    
