@@ -83,8 +83,53 @@ Pick a choice: """))
                 lop3 = True
                 
                 while lop3 == True:
+                    arrcount = len(arr)
+            
+                    bleh = int(input("Insert number of sequence you wanna edit: "))
+                
+                
+                    if bleh > arrcount:
+                        print("Bruh")
+                    
+                    elif bleh < 0:
+                        print("Bruh")
+                    
+                    else:
+                        replace = input("What do you want to input here? (it shifts all the value order to the right): ")
+                    
+                    arr.insert(bleh-1, replace)
+                    print("\n{0}".format(arr))
+                    
+                    break
+                    
+            if choice == 4:
+                
+                lop4 = True
+                
+                while lop4 == True:
+                    arrcount = len(arr)
+            
+                    bleh = int(input("Insert number of sequence you wanna edit: "))
+                
+                
+                    if bleh > arrcount:
+                        print("Bruh, that's called adding")
+                    
+                    elif bleh < 0:
+                        print("I can't delete that order moron")
                     
                     
+                    
+                    arr.pop(bleh-1)
+                    print("\n{0}".format(arr))
+                    
+                    break
+                
+            if choice == 5:
+                
+                print(arr)
+                i = 0
+                break
                 
             
             
@@ -95,4 +140,4 @@ Pick a choice: """))
                 continue
         
     
-    
+        
