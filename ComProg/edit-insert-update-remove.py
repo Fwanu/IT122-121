@@ -114,10 +114,11 @@ Pick a choice: """))
                 
                     if bleh > arrcount:
                         print("Bruh, that's called adding")
+                        continue
                     
                     elif bleh < 0:
                         print("I can't delete that order moron")
-                    
+                        continue
                     
                     
                     arr.pop(bleh-1)
