@@ -127,7 +127,7 @@ Pick a choice: """))
                 
             if choice == 5:
                 
-                print(arr)
+                print("\n{0}".format(arr))
                 i = 0
                 break
                 
