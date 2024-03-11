@@ -8,12 +8,12 @@ i = 1
 while i != 0:
     
     
-    info = input("Input information here one by one, then press e if done: ")
+    info = input("Input information here one by one, then input e- if done: ")
     arr.append(info)
     print(arr)
     
     
-    if info == "e":
+    if info == "e-":
         arr.pop(-1)
         print()
         print("\n {0}".format(arr))
@@ -24,9 +24,10 @@ while i != 0:
         
             try:
                 choice = int(input("""1 - edit
-2 - update
-3 - remove
-4 - end
+2 - update/add
+3 - insert
+4 - remove
+5 - end
 Pick a choice: """))
                 
     
@@ -55,19 +56,41 @@ Pick a choice: """))
                         replace = input("What do you want to replace this data with?: ")
                     
                     arr[bleh-1] = replace
-                    print(arr)
+                    print("\n{0}".format(arr))
                     
-                    continue
+                    break
                 
             if choice == 2:
             
                 lop2 = True
                 
+                while lop2 == True:
+                    print("\n{0}".format(arr))
+                    info = input("Input information here one by one, then input e- if done: ")
+                    arr.append(info)
+                    print(arr)
+    
+    
+                    if info == "e-":
+                        arr.pop(-1)
+                        print()
+                        print("{0}".format(arr))
+                        lop2 = False
+                        break
+                    
+            if choice == 3:
+                
+                lop3 = True
+                
+                while lop3 == True:
+                    
+                    
+                
             
             
                 
             # put in end
-            if choice > 5:
+            if choice > 5 or choice <= 0:
                 print("That's not a choice mate")
                 continue
         
