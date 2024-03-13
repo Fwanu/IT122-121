@@ -2,7 +2,6 @@
 # Write Python 3 code in this online editor and run it.
 
 arr = []
-pop = 0
 i = 1
 
 while i != 0:
@@ -27,7 +26,8 @@ while i != 0:
 2 - update/add
 3 - insert
 4 - remove
-5 - end
+5 - replace
+6 - end
 Pick a choice: """))
                 
     
@@ -42,9 +42,11 @@ Pick a choice: """))
                 while lop1 == True:
                     print("\n{0}".format(arr))
                     arrcount = len(arr)
-            
-                    bleh = int(input("Insert number of sequence you wanna edit: "))
+                    try:
+                        bleh = int(input("Insert number of sequence you wanna edit: "))
                 
+                    except ValueError:
+                        print("That's not a number idiot")
                 
                     if bleh > arrcount:
                         print("Bruh, that's called adding")
@@ -70,7 +72,6 @@ Pick a choice: """))
                     arr.append(info)
                     print(arr)
     
-    
                     if info == "e-":
                         arr.pop(-1)
                         print()
@@ -84,15 +85,20 @@ Pick a choice: """))
                 
                 while lop3 == True:
                     arrcount = len(arr)
-            
-                    bleh = int(input("Insert number of sequence you wanna edit: "))
+                    try:
+                        bleh = int(input("Insert number of sequence you wanna edit: "))
                 
+                    except ValueError:
+                        print("That's not a number bruh")
+                        continue
                 
                     if bleh > arrcount:
-                        print("Bruh")
+                        print("What the fuck")
+                        continue
                     
-                    elif bleh < 0:
-                        print("Bruh")
+                    elif bleh <= 0:
+                        print("I said I can't hold negative indexes moron")
+                        continue
                     
                     else:
                         replace = input("What do you want to input here? (it shifts all the value order to the right): ")
@@ -101,42 +107,61 @@ Pick a choice: """))
                     print("\n{0}".format(arr))
                     
                     break
-                    
+                
             if choice == 4:
                 
                 lop4 = True
                 
                 while lop4 == True:
                     arrcount = len(arr)
-            
-                    bleh = int(input("Insert number of sequence you wanna edit: "))
+                    try:
+                        bleh = int(input("What sequence order position do you want to remove?: "))
+                    except ValueError:
+                        print("what the fuck bro")
+                        continue
+                    
+                    if bleh > arrcount or bleh <= 0:
+                        print("what the fuck bro")
+                        continue
+                    
+                    
+                    
+                    arr.pop(bleh)
+                    print("\n{0}".format(arr))
+                    break
+                    
+            if choice == 5:
                 
+                lop4 = True
+                
+                while lop4 == True:
+                    arrcount = len(arr)
+                    try:
+                        bleh = int(input("Insert number of sequence you wanna edit: "))
+                    
+                    except ValueError:
+                        print("That's not a number bruh")
                 
                     if bleh > arrcount:
                         print("Bruh, that's called adding")
                         continue
                     
-                    elif bleh < 0:
+                    elif bleh <= 0:
                         print("I can't delete that order moron")
                         continue
-                    
                     
                     arr.pop(bleh-1)
                     print("\n{0}".format(arr))
                     
                     break
                 
-            if choice == 5:
-                
+            if choice == 6:
                 print("\n{0}".format(arr))
                 i = 0
                 break
                 
-            
-            
-                
             # put in end
-            if choice > 5 or choice <= 0:
+            if choice > 7 or choice <= 0:
                 print("That's not a choice mate")
                 continue
         
