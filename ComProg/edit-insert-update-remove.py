@@ -127,7 +127,7 @@ Pick a choice: """))
                     
                     
                     
-                    arr.pop(bleh)
+                    arr.pop(bleh-1)
                     print("\n{0}".format(arr))
                     break
                     
