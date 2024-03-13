@@ -116,6 +116,7 @@ Pick a choice: """))
                     arrcount = len(arr)
                     try:
                         bleh = int(input("What sequence order position do you want to remove?: "))
+                        
                     except ValueError:
                         print("what the fuck bro")
                         continue
