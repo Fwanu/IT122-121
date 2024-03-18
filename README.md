@@ -1,5 +1,5 @@
 # IT122
-DSA (Data Structures and Algorithms) stuff
+DSA (Data Structures and Algorithms) & ComProg 2 stuff
 
 Dear fuckers I have allowed access to view the files in this repository...
 
