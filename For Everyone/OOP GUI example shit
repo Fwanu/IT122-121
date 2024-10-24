@@ -1,0 +1,14 @@
+import javax.swing.JOptionPane;
+class guishit{
+
+    public static void main(String[] args){
+        String name = JOptionPane.showInputDialog("Enter your name cuh");
+        int grade = Integer.parseInt(JOptionPane.showInputDialog("Enter your grade "+name));
+        double height = Double.parseDouble(JOptionPane.showInputDialog("Enter your height "+name));
+        
+
+        JOptionPane.showMessageDialog(null, "Kys "+name+" your grade is "+grade+" your Cooked my nigga and with a hieght of "+height+" you small ass nigga");
+
+    
+    }
+}
